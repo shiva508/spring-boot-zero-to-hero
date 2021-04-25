@@ -15,7 +15,7 @@ public class RestSwagger2Config {
 	public Docket restSwaggerConfig() {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
-				.apis(RequestHandlerSelectors.basePackage("com.rest"))
+				.apis(RequestHandlerSelectors.basePackage("com.pool"))
 				.build();
 	}
 }

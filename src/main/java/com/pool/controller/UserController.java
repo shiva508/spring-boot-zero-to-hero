@@ -54,7 +54,7 @@ public class UserController {
 		return new ResponseEntity<Object>(savedUser, HttpStatus.CREATED);
 	}
 
-	@GetMapping("user")
+	@GetMapping("/users")
 	public ResponseEntity<List<User>> users() {
 		List<User> users = userService.users();
 		return new ResponseEntity<List<User>>(users.stream().filter(this::isUserAdmin).collect(Collectors.toList()).stream().filter(this::isGarentyPereiodExpired).collect(Collectors.toList()),
