@@ -14,7 +14,7 @@ import com.pool.model.Organization;
 @Configuration
 @Order(4)
 public class MyAopAfterReturn {
-	@AfterReturning(pointcut = "execution(* com.shiva.service.OrganizationServiceImpl.getAllOrganizations(..))", returning = "orgs")
+	@AfterReturning(pointcut = "execution(* com.pool.service.OrganizationServiceImpl.getAllOrganizations(..))", returning = "orgs")
 	public void afeterReturningOrganizations(JoinPoint joinPoint, List<Organization> orgs) {
 		String name = joinPoint.getSignature().toShortString();
 		System.out.println("@AFTERRETURNING:");

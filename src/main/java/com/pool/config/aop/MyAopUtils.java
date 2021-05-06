@@ -5,15 +5,15 @@ import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
 public class MyAopUtils {
-	@Pointcut("execution(* com.shiva.service.*.*(..))")
+	@Pointcut("execution(* com.pool.service.*.*(..))")
 	public void forServiceLayer() {
 		System.out.println("POINT CUT");
 	}
-	@Pointcut("execution(* com.shiva.service.*.get*(..))")
+	@Pointcut("execution(* com.pool.service.*.get*(..))")
 	public void forGetters() {
 		System.out.println("GETTER POINT CUT");
 	}
-	@Pointcut("execution(* com.shiva.service.*.set*(..))")
+	@Pointcut("execution(* com.pool.service.*.set*(..))")
 	public void forSetters() {
 		System.out.println("SETTER POINT CUT");
 	}

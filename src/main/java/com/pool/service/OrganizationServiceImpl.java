@@ -14,6 +14,7 @@ public class OrganizationServiceImpl implements OrganizationService {
 
 	@Autowired
 	private OrganizationRepository repository;
+	
 	@Override
 	@Transactional
 	public List<Organization> getAllOrganizations(){
@@ -24,6 +25,7 @@ public class OrganizationServiceImpl implements OrganizationService {
 		}
 		return result;
 	}
+	
 	@Override
 	@Transactional
 	public Organization saveOrganization(Organization organization) {

@@ -9,7 +9,7 @@ import org.springframework.core.annotation.Order;
 @Configuration
 @Order(5)
 public class MyAopAfterAdvice {
-	@After("execution(* com.shiva.service.*.*(..))")
+	@After("execution(* com.pool.service.*.*(..))")
 	public void afterAdviceAllOrganization() {
 		System.out.println("@AFTER:");
 	}

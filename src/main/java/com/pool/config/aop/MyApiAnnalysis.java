@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Order(2)
 public class MyApiAnnalysis {
-	@Before("com.shiva.configuration.MyAopUtils.onlyServicePackage()")
+	@Before("com.pool.config.aop.MyAopUtils.onlyServicePackage()")
 	public void adviceForCloud() {
 		System.out.println("MY API ANNALYSYS ADVICE");
 	}

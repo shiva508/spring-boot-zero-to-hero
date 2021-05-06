@@ -11,7 +11,7 @@ import org.springframework.core.annotation.Order;
 @Order(6)
 public class MyAopAroundAdvice {
 	// combination of before and after method is executed
-	@Around("execution(* com.shiva.service.OrganizationServiceImpl.getAllOrganizations(..))")
+	@Around("execution(* com.pool.service.OrganizationServiceImpl.getAllOrganizations(..))")
 	public Object howlongdoseittook(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
 		String method = proceedingJoinPoint.getSignature().toShortString();
 		System.out.println("ARound Method:" + method);

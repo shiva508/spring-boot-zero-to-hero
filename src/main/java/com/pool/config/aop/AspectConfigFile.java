@@ -20,17 +20,17 @@ public class AspectConfigFile {
 	/*
 	 * Using pointcut we can create single pointcut once nad ca be reused many times
 	 */
-	@Pointcut("execution(* com.shiva.service.*.*(..))")
+	@Pointcut("execution(* com.pool.service.*.*(..))")
 	private void forServiceLayer() {
 		System.out.println("POINT CUT");
 	}
 
-	@Pointcut("execution(* com.shiva.service.*.get*(..))")
+	@Pointcut("execution(* com.pool.service.*.get*(..))")
 	private void forGetters() {
 		System.out.println("GETTER POINT CUT");
 	}
 
-	@Pointcut("execution(* com.shiva.service.*.set*(..))")
+	@Pointcut("execution(* com.pool.service.*.set*(..))")
 	private void forSetters() {
 		System.out.println("SETTER POINT CUT");
 	}
@@ -82,7 +82,7 @@ public class AspectConfigFile {
 	}
 
 	/* Accessing the orguments passed in the method using JOINPOINT */
-	@Before("onlyServicePackage()")
+	//@Before("onlyServicePackage()")
 	public void joinPointForMethods(JoinPoint thejoinPoint) {
 		// get method signature
 		MethodSignature signature = (MethodSignature) thejoinPoint.getSignature();
