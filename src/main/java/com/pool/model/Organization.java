@@ -7,6 +7,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+
+import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 @Table
 public class Organization implements Serializable {
@@ -14,6 +17,8 @@ public class Organization implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	private Integer organizationId;
+	@NotBlank
+	@NotEmpty
 	private String organixzationName;
 	
 	public Organization() {

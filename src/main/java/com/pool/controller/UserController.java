@@ -24,7 +24,7 @@ import com.pool.conditional.DriverBean;
 import com.pool.conditional.UserDAO;
 import com.pool.model.User;
 import com.pool.service.UserService;
-import com.rest.util.model.UserNotFoundException;
+import com.pool.util.model.UserNotFoundException;
 
 @RestController
 @RequestMapping(value = "/")

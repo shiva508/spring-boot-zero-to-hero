@@ -1,4 +1,4 @@
-package com.rest.util.model;
+package com.pool.util.model;
 
 import org.springframework.http.HttpStatus;
 
