@@ -26,6 +26,7 @@ public class Phone {
 
 	@Column(name = "phone_number")
 	private String number;
+	
 	@Enumerated(EnumType.ORDINAL)
 	private PhoneType phoneType;
 
