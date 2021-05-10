@@ -1,5 +1,7 @@
 package com.pool.service;
 
+import java.util.List;
+
 import com.pool.model.Product;
 
 public interface ProductServive {
@@ -10,4 +12,5 @@ public interface ProductServive {
 	public void addOrganization();
 	public void getProduct(String productName,Integer orgId);
 	public void setProduct(String productName,Integer orgId);
+	public List<Product> productList();
 }

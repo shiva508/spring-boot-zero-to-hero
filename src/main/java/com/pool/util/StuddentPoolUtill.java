@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import com.pool.form.ValidationResponse;
+import com.pool.model.Organization;
 
 @Service
 public class StuddentPoolUtill {
@@ -24,6 +25,12 @@ public class StuddentPoolUtill {
 			return new ResponseEntity<List<ValidationResponse>>(validationResponse, HttpStatus.BAD_REQUEST);
 		}
 		return null;
+	}
+
+	public void processChildEntity(Organization organization) {
+		if (null != organization.getProducts() && organization.getProducts().size() > 0) {
+			organization.getProducts().stream().forEach(product->organization.addChildEntity(product));
+		}
 	}
 
 }

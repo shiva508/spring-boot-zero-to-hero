@@ -24,5 +24,11 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 		return new ResponseEntity<ExceptionResponse>(response, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
+	@ExceptionHandler(NoDataFoundException.class)
+	protected ResponseEntity<ExceptionResponse> handleDataNotFounDException(Exception ex) {
+		ExceptionResponse response = new ExceptionResponse(new Date(), ex.getMessage(), "");
+		return new ResponseEntity<ExceptionResponse>(response, HttpStatus.NOT_FOUND);
+	}
+	
 
 }

@@ -1,0 +1,35 @@
+{
+  "organixzationName": "Student Pool",
+  "organizationId": 0,
+  "products": [
+    {
+      "productId": 0,
+      "productName": "Basics of programming",
+      "productType": 0,
+      "saleType": "Direct"
+    },
+    {
+      "productId": 0,
+      "productName": "Java",
+      "productType": 0,
+      "saleType": "Online"
+    }
+  ]
+}
+
+{
+  "id": 0,
+  "name": {
+    "first": "Shiva",
+    "last": "Dasari",
+    "middle": ""
+  },
+  "notes": "WHY",
+  "phone": {
+    "id": 0,
+    "number": "9493366706",
+    "phoneType": "LAND_LINE"
+  },
+  "starred": true,
+  "website": "www.studentpool.com"
+}

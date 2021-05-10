@@ -1,10 +1,14 @@
 package com.pool.model;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table
@@ -15,6 +19,9 @@ public class Product {
 	private String productName;
 	private Integer productType;
 	private String saleType;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JsonIgnore
+	private Organization organization;
 
 	public Product() {
 		super();
@@ -50,6 +57,15 @@ public class Product {
 
 	public void setSaleType(String saleType) {
 		this.saleType = saleType;
+	}
+
+	
+	public Organization getOrganization() {
+		return organization;
+	}
+
+	public void setOrganization(Organization organization) {
+		this.organization = organization;
 	}
 
 	@Override

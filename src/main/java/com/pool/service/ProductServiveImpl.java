@@ -1,13 +1,20 @@
 package com.pool.service;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.pool.model.Product;
+import com.pool.repository.ProductRepository;
 
 @Service
 @Transactional
 public class ProductServiveImpl implements ProductServive {
+	
+	@Autowired
+	private ProductRepository productRepository;
 
 	@Override
 
@@ -56,5 +63,9 @@ public class ProductServiveImpl implements ProductServive {
 		
 	}
 
+	@Override
+	public List<Product> productList(){
+		return productRepository.findAll();
+	}
 
 }

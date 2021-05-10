@@ -34,15 +34,8 @@ public class OrganizationController {
 
 	@GetMapping("/organizations")
 	public List<Organization> getAllOraganizations() {
-		Organization organization = new Organization();
-		organization.setOrganixzationName("INFINITY");
-		organizationService.saveOrganization(organization);
 		List<Organization> restlt = null;
-		try {
 			restlt = organizationService.getAllOrganizations();
-		} catch (Exception e) {
-			System.out.println("EXCEPTION HAS OCCURED");
-		}
 		return restlt;
 	}
 	
