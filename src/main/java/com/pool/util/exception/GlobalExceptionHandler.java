@@ -30,5 +30,10 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 		return new ResponseEntity<ExceptionResponse>(response, HttpStatus.NOT_FOUND);
 	}
 	
+	@ExceptionHandler(AopUserNotFound.class)
+	protected ResponseEntity<ExceptionResponse> handleDAopataNotFounDException(Exception ex) {
+		ExceptionResponse response = new ExceptionResponse(new Date(), ex.getMessage(), "AOP");
+		return new ResponseEntity<ExceptionResponse>(response, HttpStatus.NOT_FOUND);
+	}
 
 }
