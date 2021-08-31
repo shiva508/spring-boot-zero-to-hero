@@ -3,7 +3,7 @@ package com.pool.config.aop;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 
-@Aspect
+//@Aspect
 public class MyAopUtils {
 	@Pointcut("execution(* com.pool.service.*.*(..))")
 	public void forServiceLayer() {

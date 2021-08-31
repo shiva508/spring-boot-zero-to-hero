@@ -34,6 +34,7 @@ public class AopUserController {
 
 	@GetMapping("/allaopdata")
 	public ResponseEntity<?> getAllAopUsers() {
+		aopUserService.called();
 		List<AopUser> aopUsers = aopUserService.getAllAopUsers();
 		return new ResponseEntity<>(aopUsers, HttpStatus.OK);
 	}

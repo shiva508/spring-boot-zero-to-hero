@@ -10,9 +10,9 @@ import org.springframework.core.annotation.Order;
 
 import com.pool.model.Organization;
 
-@Aspect
-@Configuration
-@Order(4)
+//@Aspect
+//@Configuration
+//@Order(4)
 public class MyAopAfterReturn {
 	@AfterReturning(pointcut = "execution(* com.pool.service.OrganizationServiceImpl.getAllOrganizations(..))", returning = "orgs")
 	public void afeterReturningOrganizations(JoinPoint joinPoint, List<Organization> orgs) {

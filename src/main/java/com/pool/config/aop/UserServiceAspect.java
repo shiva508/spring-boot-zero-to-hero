@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Configuration;
 
 import com.pool.model.User;
 
-@Aspect
-@Configuration
+//@Aspect
+//@Configuration
 public class UserServiceAspect {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 

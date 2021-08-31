@@ -10,4 +10,6 @@ public interface AopUserService {
 	public AopUser getAopUserByUserId(Integer userId);
 
 	public List<AopUser> getAllAopUsers();
+	
+	public void called();
 }

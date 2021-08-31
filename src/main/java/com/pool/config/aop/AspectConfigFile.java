@@ -12,10 +12,10 @@ import com.pool.model.Product;
 
 import javassist.bytecode.SignatureAttribute.MethodSignature;
 
-@Aspect
-@Configuration
-@ComponentScan(basePackages = { "com.pool" })
-@Order(3)
+//@Aspect
+//@Configuration
+//@ComponentScan(basePackages = { "com.pool" })
+//@Order(3)
 public class AspectConfigFile {
 	/*
 	 * Using pointcut we can create single pointcut once nad ca be reused many times

@@ -6,9 +6,9 @@ import org.aspectj.lang.annotation.Aspect;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 
-@Configuration
-@Aspect
-@Order(6)
+//@Configuration
+//@Aspect
+//@Order(6)
 public class MyAopAroundAdvice {
 	// combination of before and after method is executed
 	@Around("execution(* com.pool.service.OrganizationServiceImpl.getAllOrganizations(..))")

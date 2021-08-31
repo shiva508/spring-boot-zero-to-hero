@@ -45,4 +45,10 @@ public class AopUserServiceImpl implements AopUserService {
 		}
 	}
 
+	@Override
+	public void called() {
+		System.out.println("have fun");
+		
+	}
+
 }
