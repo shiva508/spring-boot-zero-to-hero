@@ -10,6 +10,14 @@ public interface AopUserService {
 	public AopUser getAopUserByUserId(Integer userId);
 
 	public List<AopUser> getAllAopUsers();
-	
+
 	public void called();
+
+	public void setUserName(String userName);
+
+	public String getUserName();
+
+	public void setPassword(String password);
+
+	public String getPassword();
 }

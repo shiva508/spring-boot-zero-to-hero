@@ -50,5 +50,26 @@ public class AopUserServiceImpl implements AopUserService {
 		System.out.println("have fun");
 		
 	}
+	
+	@Override
+	public void setUserName(String userName) {
+		System.out.println("userName:" + userName);
+	}
+
+	@Override
+	public String getUserName() {
+
+		return "SHIVA";
+	}
+
+	@Override
+	public void setPassword(String password) {
+		System.out.println("password:" + password);
+	}
+
+	@Override
+	public String getPassword() {
+		return "SHIVA PASSWORD";
+	}
 
 }

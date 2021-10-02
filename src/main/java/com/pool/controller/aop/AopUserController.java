@@ -38,4 +38,24 @@ public class AopUserController {
 		List<AopUser> aopUsers = aopUserService.getAllAopUsers();
 		return new ResponseEntity<>(aopUsers, HttpStatus.OK);
 	}
+	
+	@PostMapping("/setusername")
+	public void setUserName(@RequestParam("userName") String userName) {
+		aopUserService.setUserName(userName);
+	}
+
+	@GetMapping("/getusername")
+	public String getUserName() {
+		return aopUserService.getUserName();
+	}
+
+	@PostMapping("/setpassword")
+	public void setPassword(@RequestParam("password") String password) {
+		aopUserService.setPassword(password);
+	}
+
+	@GetMapping("/getpassword")
+	public String getPassword() {
+		return aopUserService.getPassword();
+	}
 }
