@@ -1,4 +1,4 @@
-package com.pool.config.aop.aopuser.pointcut;
+package com.pool.config.aop.aopuser.before.pointcut;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
