@@ -28,5 +28,9 @@ public class AopUserAspectCommonExpressions {
 	public void aopAllowPackageNoSetterPointCut() {
 		System.out.println("ALLOW PACKAGE NO SETTERS AND GETTERS");
 	}
+	@Pointcut("execution(* com.pool.service.aop.AopUserServiceImpl.getAllAopUsers(..))")
+	public void afterReturningAopUserPointcut() {
+		
+	}
 
 }
