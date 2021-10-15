@@ -20,9 +20,11 @@ public class AopUserAfterReturn {
 		System.out.println("============================AFTER RETURN ADVICE================================");
 		String method=joinPoint.getSignature().toShortString();
 		System.out.println("method:"+method);
-		aopUsers.forEach(data->{
-			System.out.println(data.getUserId()+":::::"+data.getUserName().toUpperCase());
-		});
+		/*
+		 * aopUsers.forEach(data->{
+		 * System.out.println(data.getUserId()+":::::"+data.getUserName().toUpperCase())
+		 * ; });
+		 */
 		System.out.println("============================AFTER RETURN ADVICE================================");
 	}
 }

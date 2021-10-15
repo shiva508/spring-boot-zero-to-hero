@@ -2,6 +2,8 @@ package com.pool.controller;
 
 import java.net.URI;
 
+
+
 import java.util.List;
 import java.util.stream.Collectors;
 import org.slf4j.Logger;
@@ -18,10 +20,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
-import com.pool.ConfigurationProperties.MyProperties;
 import com.pool.conditional.DriverBean;
 import com.pool.conditional.UserDAO;
+import com.pool.configurationProperties.StudentPoolProperties;
 import com.pool.model.User;
 import com.pool.service.UserService;
 import com.pool.util.model.UserNotFoundException;
@@ -37,7 +38,7 @@ public class UserController {
 	@Autowired
 	private DriverBean driverBean;
 	@Autowired
-	private MyProperties myProperties;
+	private StudentPoolProperties studentPoolProperties;
 
 	@PostMapping("user")
 	public ResponseEntity<Object> saveUser(@RequestBody User user) {
@@ -49,7 +50,7 @@ public class UserController {
 		ResponseEntity.created(path).build();
 		System.out.println(userDAO.getAllUserNames());
 		driverBean.driverName();
-		System.out.println(myProperties.toString());
+		System.out.println(studentPoolProperties.toString());
 
 		return new ResponseEntity<Object>(savedUser, HttpStatus.CREATED);
 	}
@@ -88,6 +89,6 @@ public class UserController {
 
 	@GetMapping("user/props")
 	public String getParam() {
-		return myProperties.toString();
+		return studentPoolProperties.toString();
 	}
 }
