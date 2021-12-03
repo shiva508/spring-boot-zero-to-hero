@@ -1,6 +1,9 @@
 package com.pool.controller.aop;
 
 import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,12 +20,15 @@ import com.pool.service.aop.AopUserService;
 @RestController
 @RequestMapping("/aopapi")
 public class AopUserController {
+	
+	private Logger logger = LoggerFactory.getLogger(AopUserController.class);
 
 	@Autowired
 	private AopUserService aopUserService;
 
 	@PostMapping("/save")
 	public ResponseEntity<?> save(@RequestBody AopUser aopUser) {
+		logger.info("input {}", aopUser);
 		AopUser aopUserSavedObj = aopUserService.save(aopUser);
 		return new ResponseEntity<>(aopUserSavedObj, HttpStatus.CREATED);
 	}
@@ -39,7 +45,7 @@ public class AopUserController {
 		List<AopUser> aopUsers = aopUserService.getAllAopUsers();
 		return new ResponseEntity<>(aopUsers, HttpStatus.OK);
 	}
-	
+
 	@PostMapping("/setusername")
 	public void setUserName(@RequestParam("userName") String userName) {
 		aopUserService.setUserName(userName);
